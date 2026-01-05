@@ -1,0 +1,38 @@
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin transition($property: all, $duration: 0.3s) {
+    transition: $property $duration ease;
+}
+
+@mixin box-shadow($shadow: $shadow-sm) {
+    box-shadow: $shadow;
+}
+
+@mixin responsive($breakpoint) {
+    @if $breakpoint == xs {
+        @media (max-width: $breakpoint-xs) { @content; }
+    }
+    @else if $breakpoint == sm {
+        @media (max-width: $breakpoint-sm) { @content; }
+    }
+    @else if $breakpoint == md {
+        @media (max-width: $breakpoint-md) { @content; }
+    }
+    @else if $breakpoint == lg {
+        @media (max-width: $breakpoint-lg) { @content; }
+    }
+}
+
+@mixin grid-columns($columns) {
+    grid-template-columns: repeat($columns, 1fr);
+}

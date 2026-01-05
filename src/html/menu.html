@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMAJI Coffee - Product Detail</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+     <style>
+         .breadcrumb {
+            padding: 10px 0;
+            color: #666;
+            font-size: 14px;
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px; 
+        }
+
+        .breadcrumb a {
+            text-decoration: none;
+            color: #8b5a2b;
+        }
+
+        .breadcrumb span {
+            color: #666;
+        }
+
+        .product-detail {
+            display: flex;
+            gap: 50px;
+            padding: 30px 0 60px;
+        }
+
+        .product-gallery {
+            display: flex;
+            gap: 20px;
+            width: 684.41px;
+        }
+        
+        .thumbnails-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 166.9px;
+            height: 719.88px;
+        }
+
+        .thumbnail {
+            width: 166.9px;
+            height: 164.97px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        .thumbnail img {
+            max-height: 90%;
+            object-fit: contain;
+        }
+        
+        .thumbnail img {
+            background-color: #3F8B71;
+        }
+
+        .product-image {
+            width: 497.51px;
+            height: 707.89px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .product-info {
+            width: 497.51px;
+            padding: 20px;
+        }
+
+         .product-title {
+            font-size: 32px;
+            color: #3a2c1e;
+            margin-bottom: 15px;
+            margin-top: 0; 
+        }
+
+        .price-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .current-price {
+            font-size: 30px;
+            color: #3a2c1e;
+        }
+
+        .old-price {
+            font-size: 20px;
+            color: #999;
+            text-decoration: line-through;
+        }
+
+        .app-offer {
+            color: #A27B5C;
+            border: none;
+            padding: 8px 15px; 
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background 0.3s;
+            text-align: left; 
+            margin-top: -5px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            color: #3a2c1e;
+            margin: 30px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .description {
+            color: #7F7F7F;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .description p:first-child {
+            color: #000;
+        }
+
+        .add-to-cart {
+            color: #A27B5C;
+            border: 2px solid #A27B5C;
+            padding: 15px 30px;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+            transition: background 0.3s;
+        }
+
+        .cart-actions {
+        display: flex;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .add-to-cart-btn {
+        flex: 1;
+        color: #A27B5C;
+        border: 2px solid #A27B5C;
+        padding: 15px;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s;
+        background: white;
+    }
+
+    .quantity-control {
+        display: flex;
+        align-items: center;
+        border: 2px solid #A27B5C;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    .quantity-btn {
+        width: 40px;
+        height: 48px;
+        background: white;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+        color: #A27B5C;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .quantity-display {
+        width: 40px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        font-size: 16px;
+        color: #3a2c1e;
+    }
+
+        .related-products {
+            padding: 40px 0 60px;
+            background-color: #FCF7EF;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+
+        .section-header {
+            text-align: left; 
+            margin-bottom: 40px;
+        }
+
+        .section-header h2 {
+            font-size: 32px;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .product-card {
+            background: #FCF7EF;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: #FCF7EF;
+        }
+
+        .sale-badge {
+            background-color: #e74c3c;
+            color: white;
+            padding: 5px 10px;
+            display: inline-block;
+            font-size: 12px;
+            border-radius: 0 0 4px 4px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+
+        .product-image-small {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+        }
+
+        .product-image-small img {
+            max-height: 110%;
+            object-fit: contain;
+        }
+
+        .product-image img {
+            background-color: #3F8B71;
+        }
+
+        .products-grid .product-card:nth-child(1) .product-image-small {
+            background-color: #53557D;
+        }
+
+        .products-grid .product-card:nth-child(2) .product-image-small {
+            background-color: #86664E;
+        }
+
+        .products-grid .product-card:nth-child(3) .product-image-small {
+            background-color: #494947;;
+        }
+
+        .products-grid .product-card:nth-child(4) .product-image-small {
+            background-color: #494947;
+        }
+
+        .product-info-small {
+            padding: 20px;
+        }
+
+        .availability {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .price-small {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px; 
+        }
+
+        .current-price-small {
+            font-size: 25px;
+        }
+
+        .old-price-small {
+            text-decoration: line-through;
+            color: #999;
+            margin-left: 10px;
+            font-size: 14px;
+        }
+
+        .app-offer-small {
+            color: #A27B5C;
+            border: none;
+            padding: 8px 15px; 
+            border-radius: 4px; 
+            width: 100%;
+            cursor: pointer;
+            transition: background 0.3s;
+            font-size: 14px;
+            text-align: left; 
+            margin-top: 5px; 
+            background-color: #FCF7EF; 
+        }
+
+        @media (max-width: 992px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .product-detail {
+                flex-direction: column;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .delivery-order {
+                align-items: flex-start;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+            }
+            
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            nav {
+                width: 100%;
+            }
+            
+            .header-buttons {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .product-gallery {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .thumbnails-container {
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 100%;
+                height: auto;
+                justify-content: center;
+            }
+            
+            .thumbnail {
+                width: calc(50% - 10px);
+                height: 150px;
+            }
+            
+            .product-image {
+                width: 100%;
+                height: 500px;
+            }
+            
+            .product-info {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .app-badges {
+                flex-direction: column;
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+            
+            .thumbnail {
+                width: 100%;
+            }
+        }
+    </style>
+    </head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">IMAJI<span> Coffee.</span></div>
+            
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Story</a></li>
+                    <li><a href="index.html" class="active">Menu</a></li>
+                    <li><a href="#">Space</a></li>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">News</a></li>
+                </ul>
+            </nav>
+            
+            <div class="header-buttons">
+                <button class="cart-btn">
+                    <i class="fas fa-shopping-cart"></i> Cart
+                    <span class="cart-count">(2)</span>
+                </button>
+                <button class="signin-btn">Sign In</button>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="product-detail">
+            <div class="product-gallery">
+                <div class="thumbnails-container">
+                    <div class="thumbnail">
+                        <img src="img/at-home-classic.png" alt="Coffee Package Front">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="img/at-home-classic-2.png" alt="Coffee Package Back">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="img/at-home-classic-3.png" alt="Coffee Beans">
+                    </div>
+                    <div class="thumbnail">
+                        <img src="img/at-home-classic-4.png" alt="Brewed Coffee">
+                    </div>
+                </div>
+                
+                <div class="product-image">
+                    <img src="img/at-home-classic.png" alt="At Home - Classic">
+                </div>
+            </div>
+            
+            <div class="product-info">
+                <div class="breadcrumb">
+                    <a href="#">Home</a> > 
+                    <a href="#">Menu</a> > 
+                    <span>Detail</span>
+                </div>
+                
+                <h1 class="product-title">At Home - Classic</h1>
+                
+                <div class="price-container">
+                    <span class="current-price">$4.00</span>
+                    <span class="old-price">$6.00</span>
+                    <button class="app-offer">· Get 20% Off in App</button>
+                </div>
+                
+                <div class="description">
+                    <p>Description:</p>
+                    <p>An all-time favorite blend with citrus fruit character, caramel flavors, and a pleasant faintly floral aroma. Locked scent: Excelso prevents air from entering the packaging with a locked aroma, ensuring the coffee's freshness.</p>
+                </div>
+                
+                <h3 class="section-title">Storage Way:</h3>
+                <div class="description">
+                    <p>To maintain the taste of coffee and the freshness of the aroma, store Excelso coffee in an airtight container away from direct sunlight and moisture.</p>
+                </div>
+                
+                <div class="cart-actions">
+                    <button class="add-to-cart-btn">Add to Cart</button>
+                    <div class="quantity-control">
+                        <button class="quantity-btn minus">-</button>
+                        <div class="quantity-display">1</div>
+                        <button class="quantity-btn plus">+</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <section class="related-products">
+        <div class="container">
+            <div class="section-header">
+                <h2>You May Also Like</h2>
+            </div>
+            
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="sale-badge">SALE</div>
+                    <div class="product-image-small">
+                        <img src="img/at-home-house-blend.png" alt="House Blend">
+                    </div>
+                    <div class="product-info-small">
+                        <h3>AT HOME HOUSE BLEND</h3>
+                        <p class="availability">Available Buy at Website</p>
+                        <div class="price-small">
+                            <span class="current-price-small">$5.00</span>
+                            <span class="old-price-small">$6.00</span>
+                        </div>
+                        <button class="app-offer-small">Get 20% Off in App</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="sale-badge">SALE</div>
+                    <div class="product-image-small">
+                        <img src="img/at-home-arabica.png" alt="Arabica">
+                    </div>
+                    <div class="product-info-small">
+                        <h3>AT HOME ARABICA</h3>
+                        <p class="availability">Available Buy at Website</p>
+                        <div class="price-small">
+                            <span class="current-price-small">$5.00</span>
+                            <span class="old-price-small">$6.00</span>
+                        </div>
+                        <button class="app-offer-small">Get 20% Off in App</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="sale-badge">SALE</div>
+                    <div class="product-image-small">
+                        <img src="img/at-home-luwak.png" alt="Luwak">
+                    </div>
+                    <div class="product-info-small">
+                        <h3>AT HOME LUWAK</h3>
+                        <p class="availability">Available Buy at Website</p>
+                        <div class="price-small">
+                            <span class="current-price-small">$5.00</span>
+                            <span class="old-price-small">$6.00</span>
+                        </div>
+                        <button class="app-offer-small">Get 20% Off in App</button>
+                    </div>
+                </div>
+                
+                <div class="product-card">
+                    <div class="sale-badge">SALE</div>
+                    <div class="product-image-small">
+                        <img src="img/at-home-luwak.png" alt="Luwak">
+                    </div>
+                    <div class="product-info-small">
+                        <h3>AT HOME LUWAK</h3>
+                        <p class="availability">Available Buy at Website</p>
+                        <div class="price-small">
+                            <span class="current-price-small">$5.00</span>
+                            <span class="old-price-small">$6.00</span>
+                        </div>
+                        <button class="app-offer-small">Get 20% Off in App</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+      <div class="container footer-content">
+        <div class="footer-location">
+          <h2>Our Location</h2>
+          <p>Jl. Bangkringan No 19, RT.11/RW.2, Kota Surabaya, 60124</p>
+          <p><strong>Customer Service +6282-2876-6862</strong></p>
+          <p><strong>We Are Open from Sun - Mon 10 AM - 22 PM</strong></p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="delivery-order">
+          <div class="social-icons">
+            <a href="#"
+              ><img src="img/spotify.png" alt="Spotify" width="24" height="24"
+            /></a>
+            <a href="#"
+              ><img
+                src="img/instagram.png"
+                alt="Instagram"
+                width="24"
+                height="24"
+            /></a>
+            <a href="#"
+              ><img src="img/tiktok.png" alt="TikTok" width="24" height="24"
+            /></a>
+            <a href="#"
+              ><img src="img/youtube.png" alt="YouTube" width="24" height="24"
+            /></a>
+            <a href="#"
+              ><img src="img/twitter.png" alt="Twitter" width="24" height="24"
+            /></a>
+            <a href="#"
+              ><img
+                src="img/telegram.png"
+                alt="Telegram"
+                width="24"
+                height="24"
+            /></a>
+          </div>
+
+          <h3>Delivery Order</h3>
+          <div class="app-store-badge">
+            <img src="img/1.png" alt="Download on the App Store" />
+          </div>
+          <div class="google-play-badge">
+            <img src="img/2.png" alt="GET FOR Google Play" />
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="copyright">© 2023 IMAJI COFFEE, All rights reserved</div>
+          <div class="footer-links">
+            <a href="#">Terms and Conditions</a> |
+            <a href="#">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

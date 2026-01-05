@@ -1,0 +1,111 @@
+@include responsive(md) {
+    .header-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    nav {
+        width: 100%;
+        justify-content: center;
+        
+        ul {
+            margin-right: 0;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    
+    .delivery-order {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    
+    .social-icons {
+        margin-right: 0;
+        margin-bottom: 15px;
+        justify-content: center;
+        width: 100%;
+    }
+}
+
+@include responsive(sm) {
+    .product-gallery {
+        flex-direction: column;
+    }
+    
+    .thumbnails-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .main-product-image {
+        min-height: 400px;
+    }
+    
+    .cart-actions {
+        flex-direction: column;
+    }
+}
+
+@include responsive(xs) {
+    .menu-tabs {
+        grid-template-columns: 1fr;
+        border-bottom: none;
+        gap: 15px;
+    }
+    
+    .tab {
+        text-align: left !important;
+        padding: 8px 0;
+        border-bottom: 1px solid #ddd;
+        width: 100%;
+        
+        &.active::after {
+            display: none;
+        }
+    }
+    
+    .header-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+    
+    .delivery-order {
+        align-items: center;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .copyright,
+    .footer-links {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .social-icons {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .product-detail {
+        padding: 20px 0 40px;
+    }
+    
+    .product-title {
+        font-size: 24px;
+    }
+    
+    .current-price {
+        font-size: 24px;
+    }
+}

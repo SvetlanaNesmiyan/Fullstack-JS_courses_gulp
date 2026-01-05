@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IMAJI Coffee - Our Menu</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+<body>
+  <header>
+    <div class="container header-container">
+      <div class="logo">IMAJI<span> Coffee.</span></div>
+
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Story</a></li>
+          <li><a href="menu.html" class="active">Menu</a></li>
+          <li><a href="#">Space</a></li>
+          <li><a href="#">Community</a></li>
+          <li><a href="#">News</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-buttons">
+        <button class="cart-btn">
+          <i class="fas fa-shopping-cart"></i> Cart
+          <span class="cart-count">(2)</span>
+        </button>
+        <button class="signin-btn">Sign In</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="menu-header">
+    <div class="container">
+      <h1>Our Menu</h1>
+      <p class="menu-description">
+        IMAJI Coffee provides a variety of high quality coffee and drinks and
+        flavors that are suitable for you to support and cheer up your day. We
+        also provide coffee to accompany you at home along with the equipment.
+      </p>
+
+      <div class="filters-container">
+        <div class="filters">
+          <div class="filter-group">
+            <div class="filter-header">
+              <span class="filter-label">Search</span>
+              <button class="clear-btn">
+                <i class="fas fa-times"></i> Clear
+              </button>
+            </div>
+            <div class="filter-controls">
+              <input
+                type="text"
+                class="search-input"
+                placeholder="Q: Enter keyword"
+              />
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <div class="filter-header">
+              <span class="filter-label">Price</span>
+              <button class="clear-btn">
+                <i class="fas fa-times"></i> Clear
+              </button>
+            </div>
+            <div class="filter-controls">
+              <div class="checkbox-container">
+                <input type="checkbox" id="under10" />
+                <label for="under10">Under $10</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="filter-group">
+            <div class="filter-header">
+              <span class="filter-label">Sort By</span>
+              <button class="clear-btn">
+                <i class="fas fa-times"></i> Clear
+              </button>
+            </div>
+            <div class="filter-controls">
+              <select class="filter-select">
+                <option>Best Selling</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+                <option>Newest</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <div class="menu-tabs">
+      <a href="index.html" class="tab">COFFEE AND BEVERAGE</a>
+      <a href="our-menu-2.html" class="tab active">FOOD AND SNACK</a>
+      <a href="our-menu-3.html" class="tab">IMAJI COFFEE AT HOME</a>
+    </div>
+
+    <div class="products-grid">
+      <div class="product-card">
+        <div class="product-image">
+          <img src="img/seafood-lunch.png" alt="Seafood Lunch" />
+        </div>
+        <div class="product-info">
+          <h3>SEAFOOD LUNCH</h3>
+          <p class="availability">Only at Cafe and Delivery</p>
+          <div class="price">
+            <span class="current-price">$5.00</span>
+          </div>
+          <button class="app-offer">Get 20% Off in App</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <img
+            src="img/french-toast.png"
+            alt="French Toast with Sugar"
+          />
+        </div>
+        <div class="product-info">
+          <h3>FRENCH TOAST WITH SUGAR</h3>
+          <p class="availability">Only at Cafe and Delivery</p>
+          <div class="price">
+            <span class="current-price">$5.00</span>
+          </div>
+          <button class="app-offer">Get 20% Off in App</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="sale-badge">SALE</div>
+        <div class="product-image">
+          <img src="img/chocolate-croissant.png" alt="Chocolate Croissant" />
+        </div>
+        <div class="product-info">
+          <h3>CHOCOLATE CROISSANT</h3>
+          <p class="availability">Only at Cafe and Delivery</p>
+          <div class="price">
+            <span class="current-price">$5.00</span>
+            <span class="old-price">$6.00</span>
+          </div>
+          <button class="app-offer">Get 20% Off in App</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="sale-badge">SALE</div>
+        <div class="product-image">
+          <img src="img/potato-wedges.png" alt="Potato Wedges" />
+        </div>
+        <div class="product-info">
+          <h3>POTATO WEDGES</h3>
+          <p class="availability">Only at Cafe and Delivery</p>
+          <div class="price">
+            <span class="current-price">$5.00</span>
+            <span class="old-price">$6.00</span>
+          </div>
+          <button class="app-offer">Get 20% Off in App</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <img src="img/brownies.png" alt="Brownies" />
+        </div>
+        <div class="product-info">
+          <h3>BROWNIES</h3>
+          <p class="availability">Only at Cafe and Delivery</p>
+          <div class="price">
+            <span class="current-price">$5.00</span>
+          </div>
+          <button class="app-offer">Get 20% Off in App</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="out-of-stock">OUT OF STOCK</div>
+        <div class="product-image">
+          <img src="img/banana-cake.png" alt="Banana Cake" />
+        </div>
+        <div class="product-info">
+          <h3>BANANA CAKE</h3>
+          <p class="availability">Only at Cafe and Delivery</p>
+          <div class="price">
+            <span class="current-price">$5.00</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <img src="img/sandwiches-and-pickles.png" alt="Sandwiches and Pickles" />
+        </div>
+        <div class="product-info">
+          <h3>SANDWICHES AND PICKLES</h3>
+          <p class="availability">Only at Cafe and Delivery</p>
+          <div class="price">
+            <span class="current-price">$5.00</span>
+          </div>
+          <button class="app-offer">Get 20% Off in App</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <img
+            src="img/spaghetti-bolognese.png"
+            alt="Spaghetti Bolognese"
+          />
+        </div>
+        <div class="product-info">
+          <h3>SPAGHETTI BOLOGNESE</h3>
+          <p class="availability">Only at Cafe and Delivery</p>
+          <div class="price">
+            <span class="current-price">$5.00</span>
+          </div>
+          <button class="app-offer">Get 20% Off in App</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <img src="img/sandwich-vegan.png" alt="Sandwich Vegan" />
+        </div>
+        <div class="product-info">
+          <h3>SANDWICH VEGAN</h3>
+          <p class="availability">Only at Cafe and Delivery</p>
+          <div class="price">
+            <span class="current-price">$5.00</span>
+          </div>
+          <button class="app-offer">Get 20% Off in App</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="sale-badge">SALE</div>
+        <div class="product-image">
+          <img src="img/eggs-benedict-burger.png" alt="Eggs Benedict Burger" />
+        </div>
+        <div class="product-info">
+          <h3>EGGS BENEDICT BURGER</h3>
+          <p class="availability">Only at Cafe and Delivery</p>
+          <div class="price">
+            <span class="current-price">$5.00</span>
+            <span class="old-price">$6.00</span>
+          </div>
+          <button class="app-offer">Get 20% Off in App</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="sale-badge">SALE</div>
+        <div class="product-image">
+          <img src="img/corn-cheese-sandwich.png" alt="Corn Cheese Sandwich" />
+        </div>
+        <div class="product-info">
+          <h3>CORN CHEESE SANDWICH</h3>
+          <p class="availability">Only at Cafe and Delivery</p>
+          <div class="price">
+            <span class="current-price">$5.00</span>
+            <span class="old-price">$6.00</span>
+          </div>
+          <button class="app-offer">Get 20% Off in App</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="product-image">
+          <img src="img/buttermilk-waffle.png" alt="Buttermilk Waffle" />
+        </div>
+        <div class="product-info">
+          <h3>BUTTERMILK WAFFLE</h3>
+          <p class="availability">Only at Cafe and Delivery</p>
+          <div class="price">
+            <span class="current-price">$5.00</span>
+          </div>
+          <button class="app-offer">Get 20% Off in App</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="load-more">
+      <button class="load-more-btn">Load More</button>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <div class="footer-location">
+        <h2>Our Location</h2>
+        <p>Jl. Bangkringan No 19, RT.11/RW.2, Kota Surabaya, 60124</p>
+        <p><strong>Customer Service +6282-2876-6862</strong></p>
+        <p><strong>We Are Open from Sun - Mon 10 AM - 22 PM</strong></p>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="delivery-order">
+        <div class="social-icons">
+          <a href="#"
+            ><img src="img/spotify.png" alt="Spotify" width="24" height="24"
+          /></a>
+          <a href="#"
+            ><img
+              src="img/instagram.png"
+              alt="Instagram"
+              width="24"
+              height="24"
+          /></a>
+          <a href="#"
+            ><img src="img/tiktok.png" alt="TikTok" width="24" height="24"
+          /></a>
+          <a href="#"
+            ><img src="img/youtube.png" alt="YouTube" width="24" height="24"
+          /></a>
+          <a href="#"
+            ><img src="img/twitter.png" alt="Twitter" width="24" height="24"
+          /></a>
+          <a href="#"
+            ><img
+              src="img/telegram.png"
+              alt="Telegram"
+              width="24"
+              height="24"
+          /></a>
+        </div>
+
+
+      </div>
+
+      <div class="footer-bottom">
+        <div class="copyright">© 2023 IMAJI COFFEE, All rights reserved</div>
+        <div class="footer-links">
+          <a href="#">Terms and Conditions</a> |
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

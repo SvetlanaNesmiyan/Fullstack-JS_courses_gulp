@@ -1,0 +1,117 @@
+footer {
+    background-color: $dark-bg;
+    color: $light-text;
+    padding: 60px 0 30px;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-location {
+    margin-bottom: 30px;
+    text-align: center;
+    
+    h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+        color: $white;
+    }
+    
+    p {
+        margin-bottom: 10px;
+        font-size: 16px;
+    }
+    
+    strong {
+        font-weight: normal;
+    }
+}
+
+.divider {
+    height: 1px;
+    background-color: #5a3f2b;
+    margin: 30px 0;
+}
+
+.delivery-order {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: nowrap;
+    
+    h3 {
+        font-size: 24px;
+        margin-bottom: 0;
+        margin-right: 15px;
+        white-space: nowrap;
+    }
+}
+
+.app-store-badge {
+    width: 134px;
+    height: 40px;
+    @include flex-center;
+}
+
+.app-store-badge img,
+.google-play-badge img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.google-play-badge {
+    width: 134px;
+    height: 40px;
+    @include flex-center;
+}
+
+.footer-bottom {
+    @include flex-between;
+    align-items: center;
+    width: 100%;
+}
+
+.copyright {
+    font-size: 14px;
+    color: #b7a996;
+    text-align: left;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    text-align: right;
+    
+    a {
+        color: $light-text;
+        text-decoration: none;
+        font-size: 14px;
+        @include transition(color);
+        
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-right: auto;
+    
+    a {
+        color: $light-text;
+        font-size: 18px;
+        text-decoration: none;
+        @include transition(color);
+        
+        &:hover {
+            color: $primary-color;
+        }
+    }
+}
